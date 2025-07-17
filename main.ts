@@ -2,7 +2,15 @@ namespace SpriteKind {
     export const Collectable = SpriteKind.create()
     export const Squeaker = SpriteKind.create()
 }
+
+function loadLevelTwo() {
+
+    tiles.setCurrentTilemap(assets.tilemap`level2`)
+
+}
+
 info.onCountdownEnd(function () {
+    
     game.over(true, effects.confetti)
 })
 sprites.onOverlap(SpriteKind.Enemy, SpriteKind.Player, function (sprite, otherSprite) {
@@ -52,7 +60,20 @@ let ruby: Sprite = null
 let squeaker = false
 let distraction = false
 let rubyspeed = 0
+let level1Score = 0
+let level2Score = 0
 let mySprite: Sprite = null
+
+let waterHazerd = [tiles.getTilesByType(assets.tile`hazardWater`), tiles.getTilesByType(assets.tile`hazardWater0`), tiles.getTilesByType(assets.tile`hazardWater1`), tiles.getTilesByType(assets.tile`hazardWater2`), tiles.getTilesByType(assets.tile`hazardWater3`), tiles.getTilesByType(assets.tile`hazardWater4`), tiles.getTilesByType(assets.tile`hazardWater5`), tiles.getTilesByType(assets.tile`hazardWater6`), tiles.getTilesByType(assets.tile`hazardWater7`)]
+let balloonSpawnSpace = [tiles.getTilesByType(assets.tile`Area1`), tiles.getTilesByType(assets.tile`Item1`), tiles.getTilesByType(assets.tile`Area2`), tiles.getTilesByType(assets.tile`Item2`), tiles.getTilesByType(assets.tile`Area3`), tiles.getTilesByType(assets.tile`Item3`), tiles.getTilesByType(assets.tile`Area4`), tiles.getTilesByType(assets.tile`Item4`)]
+let rubySpawnSpace = [tiles.getTilesByType(assets.tile`BadGuy3`)]
+let area1RugSpace = [tiles.getTilesByType(assets.tile`Area1`), tiles.getTilesByType(assets.tile`NPC1`)]
+let area2RugSpace = [tiles.getTilesByType(assets.tile`Area2`), tiles.getTilesByType(assets.tile`NPC2`)]
+let area3RugSpace = [tiles.getTilesByType(assets.tile`Area3`), tiles.getTilesByType(assets.tile`NPC3`)]
+let area4RugSpace = [tiles.getTilesByType(assets.tile`Area4`), tiles.getTilesByType(assets.tile`NPC4`)]
+
+
+
 // Main Game Setup
 scene.setBackgroundColor(12)
 tiles.setCurrentTilemap(tilemap`Arena Demo`)
