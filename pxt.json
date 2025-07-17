@@ -1,9 +1,11 @@
 {
-    "name": "Ezra's Chase 2.1",
+    "name": "Ezra's Chase 3-0",
     "description": "",
     "dependencies": {
         "device": "*",
-        "tutorial-test-chase": "github:comander227/tutorial-test-chase#v0.0.1"
+        "tutorial-test-chase": "github:comander227/tutorial-test-chase#v0.0.1",
+        "arcade-tile-util": "github:microsoft/arcade-tile-util#v1.2.0",
+        "arcade-sprite-data": "github:microsoft/arcade-sprite-data#v0.2.1"
     },
     "files": [
         "main.blocks",
@@ -19,7 +21,7 @@
         "test.ts"
     ],
     "targetVersions": {
-        "target": "1.12.46",
+        "target": "2.0.56",
         "targetId": "arcade"
     },
     "supportedTargets": [
