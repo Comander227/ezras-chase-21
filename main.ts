@@ -74,6 +74,8 @@ let area4RugSpace = [tiles.getTilesByType(assets.tile`Area4`), tiles.getTilesByT
 
 
 
+
+
 // Main Game Setup
 scene.setBackgroundColor(12)
 tiles.setCurrentTilemap(tilemap`Arena Demo`)
